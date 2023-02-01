@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "\nCREATE TABLE DEPARTMENT\n(\n   DEPTCODE   INT(10),\n   DeptName   CHAR(30),\n   LOCATION   VARCHAR(33)\n);\n\nCREATE TABLE EMPLOYEE\n(\n   EmpCode      INT(4),\n   EmpFName     VARCHAR(15),\n   EmpLName     VARCHAR(15),\n   Job          VARCHAR(45),\n   Manager      CHAR(4),\n   HireDate     DATE,\n   Salary       INT(6),\n   Commission   INT(6),\n   DEPTCODE     INT(2)\n);\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "appdb",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

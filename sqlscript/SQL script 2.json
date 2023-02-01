@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "-- Read multiple files with same schema\n-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK (\n            'https://devsynapseac.dfs.core.windows.net/devfile/part-00000-67e62f4f-c1f4-4d96-aa88-af440484aa90-c000.csv',\n\t\t\t'https://devsynapseac.dfs.core.windows.net/devfile/part-00001-67e62f4f-c1f4-4d96-aa88-af440484aa90-c000.csv',\n\t\t\t'https://devsynapseac.dfs.core.windows.net/devfile/part-00003-67e62f4f-c1f4-4d96-aa88-af440484aa90-c000.csv',\n\t\t\t'https://devsynapseac.dfs.core.windows.net/devfile/part-00002-67e62f4f-c1f4-4d96-aa88-af440484aa90-c000.csv'\n        ),\n        FORMAT = 'CSV',\n        PARSER_VERSION = '2.0'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
